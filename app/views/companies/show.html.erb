@@ -1,0 +1,13 @@
+<ul>
+  <li>Company name: <%= @company.name %></li>
+  <li>Company country: <%= @company.country %></li>
+  <li>Company Employee count: <%= @company.employees_count %></li>
+</ul>
+Company Hierarchy
+<%= render_hash_tree(@company_tree) %>
+
+<%= link_to 'Show companies employees', company_employees_path(@company) %>
+<br>
+<%= link_to 'See all companies', companies_path %>
+<br>
+<%= link_to 'Create another company', new_company_path %>

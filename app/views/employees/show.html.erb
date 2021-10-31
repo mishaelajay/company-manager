@@ -1,0 +1,13 @@
+<ul>
+  <li>Employee id: <%= @employee.id %></li>
+  <li>Company name: <%= @employee.company.name %></li>
+  <li>Company country: <%= @employee.company.country %></li>
+</ul>
+
+<br>
+<%= link_to 'Show Company', company_path(@employee.company) %>
+<br>
+<%= link_to 'Show all Companies', companies_path %>
+<br>
+<%= link_to 'Create another employee', new_company_employee_path(@employee.company) %>
+<br>
