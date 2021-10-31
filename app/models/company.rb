@@ -2,7 +2,8 @@
 
 # To store companies
 class Company < ApplicationRecord
-  scope :requirement_unsatisfied, -> { Company.where(valid: false) }
+  scope :requirement_satisfied, -> { Company.where(requirement_satisfied: true) }
+  scope :requirement_unsatisfied, -> { Company.where(requirement_satisfied: false) }
 
   has_many :employees,
            inverse_of: :company,
@@ -17,8 +18,6 @@ class Company < ApplicationRecord
   def satisfies_requirement?
     total_employees_count >= required_employees_count
   end
-
-  private
 
   def update_validity
     self.requirement_satisfied = true if satisfies_requirement?

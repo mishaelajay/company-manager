@@ -1,3 +1,8 @@
-<%= render_hash_tree(@company_tree) %>
+<%= render_hash_tree(@companies_tree) %>
 <%= link_to 'Add Company', new_company_path %>
+<br>
 <%= link_to 'Add Employee', new_employee_path %>
+<br>
+<%= link_to 'View valid companies', companies_path(valid: true) %>
+<br>
+<%= link_to 'View invalid companies', companies_path(valid: false) %>

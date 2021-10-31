@@ -5,7 +5,7 @@ class EmployeesController < ApplicationController
   before_action :set_company
 
   def new
-    @employee = @company.employees.new
+    @employee = Employee.new
   end
 
   def create

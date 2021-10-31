@@ -2,7 +2,7 @@
 
 Rails.application.routes.draw do
   resources :companies do
-    resources :employees
+    resources :employees, only: :index
   end
 
   resources :employees
