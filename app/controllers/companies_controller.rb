@@ -14,15 +14,10 @@ class CompaniesController < ApplicationController
   end
 
   def index
-    @companies = if params[:valid].present?
-                   if params[:valid] == true
-                     Company.requirement_satisfied.order(:lft)
-                   else
-                     Company.requirement_unsatisfied.order(:lft)
-                   end
-                 else
-                   Company.all.order(:lft)
-                 end
+    @companies = Company.requirement_satisfied if params[:valid].present?
+    @companies = Company.requirement_unsatisfied if params[:invalid].present?
+
+    @companies ||= Company.all.order(:lft)
     @companies_tree = build_hash_tree(@companies)
   end
 

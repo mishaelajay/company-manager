@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 2021_10_31_060434) do
     t.string "name"
     t.integer "sub_company_count", default: 0
     t.integer "employees_count", default: 0
+    t.integer "total_employees_count", default: 0
     t.integer "required_employees_count", default: 0
     t.boolean "requirement_satisfied", default: false
     t.string "country"
