@@ -32,15 +32,10 @@ class CompanyTest < ActiveSupport::TestCase
         sub_company = create(:company, parent: company)
         sub_sub_company = create(:company, parent: sub_company )
 
-        assert_equal 0, company.total_employees_count
-        assert_equal 0, sub_company.total_employees_count
-        assert_equal 0, sub_sub_company.total_employees_count
-        assert_equal 0, sub_sub_company.employees_count
+        assert_total_emp_count([company, sub_company, sub_sub_company], 0)
 
         sub_sub_company.increment_ancestral_emp_count!
         
-        assert_equal 1, company.reload.total_employees_count
-        assert_equal 1, sub_company.reload.total_employees_count
-        assert_equal 1, sub_sub_company.reload.total_employees_count
+        assert_total_emp_count([company, sub_company, sub_sub_company], 1)
     end
 end

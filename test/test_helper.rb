@@ -20,5 +20,12 @@ module ActiveSupport
     FactoryBot.find_definitions
     # Setup all fixtures in test/fixtures/*.yml for all tests in alphabetical order.
     fixtures :all
+
+
+    def assert_total_emp_count(companies, count)
+        companies.each do |company|
+            assert_equal count, company.reload.total_employees_count
+        end
+    end
   end
 end

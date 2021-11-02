@@ -29,12 +29,4 @@ class EmployeeTest < ActiveSupport::TestCase
         assert_total_emp_count([company, sub_company, sub_sub_company], 0)
         assert_equal 0, sub_sub_company.employees_count
     end
-
-    private
-
-    def assert_total_emp_count(companies, count)
-        companies.each do |company|
-            assert_equal count, company.reload.total_employees_count
-        end
-    end
 end

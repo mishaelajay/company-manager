@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite time='0.505495' skipped='0' failures='0' errors='0' name="EmployeeTest" assertions='14' tests='2' timestamp="2021-11-02T16:17:46+05:30">
-  <testcase time='0.493688' file="test/models/employee_test.rb" name="test_creating/destroying_an_employee_for_a_sub_company_must_update_all_parent_companies_total_employee_count" assertions='12'>
-  </testcase>
-  <testcase time='0.011807' file="test/models/employee_test.rb" name="test_creating_a_new_employee_must_increment_employee_count_for_company" assertions='2'>
-  </testcase>
-</testsuite>
