@@ -33,9 +33,24 @@ gem 'country_select', '~> 6.0'
 gem 'simple_form'
 
 group :development, :test do
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
+  # Prints Ruby objects in full color exposing their internal structure with
+  # proper indentation.
+  # https://github.com/awesome-print/awesome_print
+  gem 'awesome_print'
+  # Call 'byebug' anywhere in the code to stop execution and get a debugger
+  # console
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
+  # A Ruby gem to load environment variables from `.env`.
+  # https://github.com/bkeepers/dotenv
+  gem 'dotenv-rails'
+  # A library for setting up Ruby objects as test data.
+  # https://github.com/thoughtbot/factory_bot
+  gem 'factory_bot'
+  # A library for generating fake data such as names, addresses, and phone
+  # numbers. https://github.com/stympy/faker
+  gem 'faker'
 end
+
 
 group :development do
   # A static analysis security vulnerability scanner for Ruby on Rails
@@ -68,9 +83,21 @@ end
 group :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '>= 3.26'
+  # Minitest reporter plugin for CircleCI.
+  # https://github.com/circleci/minitest-ci
+  gem 'minitest-ci'
+  # Mocha is a mocking and stubbing library for Ruby.
+  # https://github.com/freerange/mocha
+  gem 'mocha'
   gem 'selenium-webdriver'
   # Easy installation and use of web drivers to run system tests with browsers
   gem 'webdrivers'
+  # Library for stubbing and setting expectations on HTTP requests in Ruby.
+  # https://github.com/bblimke/webmock
+  gem 'webmock'
+  # For replaying HTTP requests
+  # https://github.com/myronmarston/vcr
+  gem 'vcr'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

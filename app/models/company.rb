@@ -33,10 +33,30 @@ class Company < ApplicationRecord
     save!
   end
 
-  def update_ancestral_emp_count!
-    self_and_ancestors.each do |company|
-      company.increment_total_emp_count!
-      company.update_validity!
+  def decrement_total_emp_count
+    self.total_employees_count -= 1
+  end
+
+  def decrement_total_emp_count!
+    decrement_total_emp_count
+    save!
+  end
+
+  def increment_ancestral_emp_count!
+    ActiveRecord::Base.transaction do
+      self_and_ancestors.each do |company|
+        company.increment_total_emp_count!
+        company.update_validity!
+      end
+    end
+  end
+
+  def decrement_ancestral_emp_count!
+    ActiveRecord::Base.transaction do
+      self_and_ancestors.each do |company|
+        company.decrement_total_emp_count!
+        company.update_validity!
+      end
     end
   end
 end
