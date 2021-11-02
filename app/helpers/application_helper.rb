@@ -2,6 +2,7 @@
 
 # Helper methods
 module ApplicationHelper
+  # rubocop:disable Rails/OutputSafety
   def render_hash_tree(tree)
     content_tag :ul do
       tree.each_pair do |node, children|
@@ -14,4 +15,5 @@ module ApplicationHelper
       end
     end
   end
+  # rubocop:enable Rails/OutputSafety
 end

@@ -51,7 +51,6 @@ group :development, :test do
   gem 'faker'
 end
 
-
 group :development do
   # A static analysis security vulnerability scanner for Ruby on Rails
   # applications. https://github.com/presidentbeef/brakeman

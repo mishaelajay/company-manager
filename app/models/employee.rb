@@ -3,7 +3,7 @@
 # To Store employees
 class Employee < ApplicationRecord
   belongs_to :company, counter_cache: true
-  
+
   after_create_commit :increment_company_emp_count
   after_destroy_commit :decrement_company_emp_count
 

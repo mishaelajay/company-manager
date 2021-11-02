@@ -15,17 +15,16 @@ module ActiveSupport
     include FactoryBot::Syntax::Methods
     # Run tests in parallel with specified workers
     parallelize(workers: :number_of_processors)
-    
+
     # Setup all factories & fixtures
     FactoryBot.find_definitions
     # Setup all fixtures in test/fixtures/*.yml for all tests in alphabetical order.
     fixtures :all
 
-
     def assert_total_emp_count(companies, count)
-        companies.each do |company|
-            assert_equal count, company.reload.total_employees_count
-        end
+      companies.each do |company|
+        assert_equal count, company.reload.total_employees_count
+      end
     end
   end
 end
