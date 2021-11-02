@@ -2,9 +2,14 @@ Hi Slava,
 
 Thank you for the task description and my apologies for the delay.
 This repository contains my basic implementation for the requirements you have given.
-The ui is very basic and just enough to interact with the application.
+The ui is very basic and just enough to interact with the application. Please go through the ui label diagram i have added below.
 
 I have deployed this repository on heroku - [Company Manager](https://shielded-retreat-15233.herokuapp.com/)
+
+How to read the ui:
+
+![ui_labels](https://user-images.githubusercontent.com/13768552/139883974-655c2ac4-1870-4cf5-ac49-e05432c873ac.jpeg)
+
 
 After going through the task description i explored various ways of doing this in the most efficient way.
 
@@ -36,7 +41,7 @@ Setting it up on your local:
 
 - Clone the repository.
 - Install ruby 3.0.2. Or set RVM to use 3.0.2
-- Install postgres and create company_manager_development database
+- Install postgres and create db with name -> company_manager_development
 - ```bundle install```
 - ```rails db:migrate```
 - Start the server using ```rails s```
@@ -68,3 +73,9 @@ I have covered all the requirements as shown below.
 Ruby and rails version: 
 Ruby 3.0.2
 Rails 6.1.4
+
+
+Looking forward to your feedback. 
+
+Thanks in advance,
+Ajay Mishael
