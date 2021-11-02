@@ -62,11 +62,11 @@ What i have missed:
 
 I have covered all the requirements as shown below.
 - [x] Add a company (each company has a unique ID)
-- [x] Set relations between companies
+- [x] Set relations between companies (via rails console-> ```company.move_to_child_of company2```)
 - [x] Set required amount of employees for the company
-- [x] Remove a company
+- [x] Remove a company (via rails console)
 - [x] Add an employee to the company (each employee has a unique ID, other attributes are irrelevant)
-- [x] Remove an employee from the company
+- [x] Remove an employee from the company (via rails console)
 - [x] Get a list of all companies
 - [x] Get a list of all companies where the amount of employees is less than required
 
