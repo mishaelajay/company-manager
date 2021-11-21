@@ -1,7 +1,4 @@
-Hi Slava,
 
-Thank you for the task description and my apologies for the delay.
-This repository contains my basic implementation for the requirements you have given.
 The ui is very basic and just enough to interact with the application. Please go through the ui label diagram i have added below.
 
 I have deployed this repository on heroku - [Company Manager](https://shielded-retreat-15233.herokuapp.com/)
@@ -75,7 +72,3 @@ Ruby 3.0.2
 Rails 6.1.4
 
 
-Looking forward to your feedback. 
-
-Thanks in advance,
-Ajay Mishael
